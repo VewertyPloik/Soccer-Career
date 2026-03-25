@@ -207,7 +207,7 @@
     // --- SAVE & LOAD ---
     function saveGame() { localStorage.setItem("soccerCareerSave", JSON.stringify(career)); }
     function loadGame() {
-        let saved = localStorage.getItem("");
+        let saved = localStorage.getItem("soccerCareerSave");
         if (saved) {
             career = JSON.parse(saved);
             if(!career.seasonStats) career.seasonStats = { 1: {goals:0, assists:0} };
